@@ -1,0 +1,17 @@
+{
+  "name": "HealPRO AI Diagnostics App",
+  "short_name": "HealPRO",
+  "description": "Accessible medical diagnostics and risk assessment mobile app.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c0914",
+  "theme-color": "#1a1528",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

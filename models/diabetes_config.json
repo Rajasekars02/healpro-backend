@@ -1,0 +1,22 @@
+{
+    "features": [
+        "Pregnancies",
+        "Glucose",
+        "BloodPressure",
+        "SkinThickness",
+        "Insulin",
+        "BMI",
+        "DiabetesPedigreeFunction",
+        "Age"
+    ],
+    "medians": {
+        "Glucose": 117.0,
+        "BloodPressure": 72.0,
+        "SkinThickness": 29.0,
+        "Insulin": 125.0,
+        "BMI": 32.3,
+        "Pregnancies": 3.0,
+        "DiabetesPedigreeFunction": 0.3725,
+        "Age": 29.0
+    }
+}

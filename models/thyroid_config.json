@@ -1,0 +1,137 @@
+{
+    "features": [
+        "age",
+        "TSH",
+        "T3",
+        "TT4",
+        "T4U",
+        "FTI",
+        "sex",
+        "on_thyroxine",
+        "query_on_thyroxine",
+        "on_antithyroid_meds",
+        "sick",
+        "pregnant",
+        "thyroid_surgery",
+        "I131_treatment",
+        "query_hypothyroid",
+        "query_hyperthyroid",
+        "lithium",
+        "goitre",
+        "tumor",
+        "hypopituitary",
+        "psych"
+    ],
+    "numeric_features": [
+        "age",
+        "TSH",
+        "T3",
+        "TT4",
+        "T4U",
+        "FTI"
+    ],
+    "categorical_features": [
+        "sex",
+        "on_thyroxine",
+        "query_on_thyroxine",
+        "on_antithyroid_meds",
+        "sick",
+        "pregnant",
+        "thyroid_surgery",
+        "I131_treatment",
+        "query_hypothyroid",
+        "query_hyperthyroid",
+        "lithium",
+        "goitre",
+        "tumor",
+        "hypopituitary",
+        "psych"
+    ],
+    "medians": {
+        "age": 55.0,
+        "TSH": 1.4,
+        "T3": 1.9,
+        "TT4": 104.0,
+        "T4U": 0.96,
+        "FTI": 109.0
+    },
+    "modes": {
+        "sex": "f",
+        "on_thyroxine": "f",
+        "query_on_thyroxine": "f",
+        "on_antithyroid_meds": "f",
+        "sick": "f",
+        "pregnant": "f",
+        "thyroid_surgery": "f",
+        "I131_treatment": "f",
+        "query_hypothyroid": "f",
+        "query_hyperthyroid": "f",
+        "lithium": "f",
+        "goitre": "f",
+        "tumor": "f",
+        "hypopituitary": "f",
+        "psych": "f"
+    },
+    "cat_mappings": {
+        "sex": {
+            "f": 0,
+            "m": 1
+        },
+        "on_thyroxine": {
+            "f": 0,
+            "t": 1
+        },
+        "query_on_thyroxine": {
+            "f": 0,
+            "t": 1
+        },
+        "on_antithyroid_meds": {
+            "f": 0,
+            "t": 1
+        },
+        "sick": {
+            "f": 0,
+            "t": 1
+        },
+        "pregnant": {
+            "f": 0,
+            "t": 1
+        },
+        "thyroid_surgery": {
+            "f": 0,
+            "t": 1
+        },
+        "I131_treatment": {
+            "f": 0,
+            "t": 1
+        },
+        "query_hypothyroid": {
+            "f": 0,
+            "t": 1
+        },
+        "query_hyperthyroid": {
+            "f": 0,
+            "t": 1
+        },
+        "lithium": {
+            "f": 0,
+            "t": 1
+        },
+        "goitre": {
+            "f": 0,
+            "t": 1
+        },
+        "tumor": {
+            "f": 0,
+            "t": 1
+        },
+        "hypopituitary": {
+            "f": 0,
+            "t": 1
+        },
+        "psych": {
+            "f": 0,
+            "t": 1
+        }
+    }
+}

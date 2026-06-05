@@ -1,0 +1,15 @@
+{
+    "features": [
+        "Age",
+        "Glucose",
+        "BloodPressure",
+        "BMI"
+    ],
+    "medians": {
+        "Age": 53.0,
+        "Glucose": 7.9,
+        "BloodPressure": 80.0,
+        "BMI": 21.0
+    },
+    "glucose_conversion_mgdl_to_mmol": 0.05555555555555555
+}
