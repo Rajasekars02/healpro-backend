@@ -4,19 +4,19 @@
 
 /* Variables and Theme Tokens */
 :root {
-    --bg-main: #0c0914;
-    --bg-surface: #171324;
-    --bg-header: rgba(12, 9, 20, 0.85);
-    --border-color: rgba(255, 255, 255, 0.08);
-    --text-primary: #f3f4f6;
-    --text-secondary: #9ca3af;
-    --text-hint: #6b7280;
+    --bg-main: #0b0f19; /* Deeper slate dark */
+    --bg-surface: rgba(20, 27, 45, 0.6); /* Glassmorphic surface */
+    --bg-header: rgba(11, 15, 25, 0.7);
+    --border-color: rgba(255, 255, 255, 0.05);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-hint: #64748b;
     
     --primary: #8b5cf6;
-    --primary-glow: rgba(139, 92, 246, 0.35);
-    --secondary: #06b6d4;
-    --secondary-glow: rgba(6, 182, 212, 0.35);
-    --accent: #d946ef;
+    --primary-glow: rgba(139, 92, 246, 0.4);
+    --secondary: #2dd4bf;
+    --secondary-glow: rgba(45, 212, 191, 0.4);
+    --accent: #f43f5e;
     
     --success: #10b981;
     --warning: #f59e0b;
@@ -102,6 +102,22 @@ body.accessibility-extra {
     padding: 0;
     font-family: 'Inter', -apple-system, sans-serif;
     -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
 
 body {
@@ -207,14 +223,15 @@ h1, h2, h3, h4, h5, h6, .brand-name {
 .app-header {
     height: 56px;
     background: var(--bg-header);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-color);
     padding: 0 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 90;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .brand {
@@ -500,9 +517,12 @@ h1, h2, h3, h4, h5, h6, .brand-name {
     flex-direction: column;
     overflow: hidden;
     border: 1px solid var(--border-color);
-    background: rgba(255,255,255,0.01);
-    border-radius: 20px;
+    background: var(--bg-surface);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 24px;
     height: 480px; /* default desktop height */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 .chat-messages {
@@ -535,10 +555,12 @@ h1, h2, h3, h4, h5, h6, .brand-name {
 }
 
 .chat-message.bot .message-bubble {
-    background: var(--bg-surface);
+    background: rgba(30, 41, 59, 0.7);
     color: var(--text-primary);
     border-bottom-left-radius: 4px;
     border: 1px solid var(--border-color);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .chat-message.user .message-bubble {
@@ -550,8 +572,10 @@ h1, h2, h3, h4, h5, h6, .brand-name {
 
 .chat-controls {
     border-top: 1px solid var(--border-color);
-    padding: 12px;
-    background: var(--bg-surface);
+    padding: 16px;
+    background: rgba(11, 15, 25, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 @media (max-width: 900px) {
@@ -589,7 +613,9 @@ h1, h2, h3, h4, h5, h6, .brand-name {
     right: 0;
     max-height: 180px;
     overflow-y: auto;
-    background: var(--bg-surface);
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     box-shadow: 0 -8px 24px rgba(0,0,0,0.4);
@@ -1393,7 +1419,9 @@ body.layout-desktop .app-nav {
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    background: var(--bg-surface);
+    background: rgba(15, 23, 42, 0.3);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-top: none;
     border-right: 1px solid var(--border-color);
     padding: 36px 20px;
@@ -1458,7 +1486,7 @@ body.layout-desktop .app-screens {
     grid-area: main;
     padding: 40px 48px;
     overflow-y: auto;
-    background: var(--bg-main);
+    background: transparent;
 }
 
 body.layout-desktop .screen-view {
@@ -1481,7 +1509,7 @@ body.layout-desktop .chat-wrapper {
 }
 
 /* SCREEN 2: Clinical Risk Calculator split columns */
-body.layout-desktop #screenCalculators {
+body.layout-desktop #screenCalculators.active {
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
@@ -1526,7 +1554,7 @@ body.layout-desktop .calc-results .close-results {
 }
 
 /* SCREEN 3: Age Insights Decade Timeline Grid */
-body.layout-desktop #screenAgeInsights {
+body.layout-desktop #screenAgeInsights.active {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: 32px;
@@ -1559,7 +1587,7 @@ body.layout-desktop #screenAgeInsights .timelines-summary {
 }
 
 /* SCREEN 4: About / Settings Dual Columns */
-body.layout-desktop #screenSettings {
+body.layout-desktop #screenSettings.active {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
